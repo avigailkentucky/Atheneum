@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package message;
+
+// Basic node-to-node envelope for Atheneum messages.
+message Envelope {
+  string id = 1; // uuid
+  string from = 2;
+  string to = 3;
+  bytes payload = 4; // application-specific payload (could be another proto)
+  int64 timestamp = 5;
+}
+
+message Ping {
+  string node_id = 1;
+  int64 ts = 2;
+}

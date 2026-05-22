@@ -1,0 +1,22 @@
+# Node configuration for Atheneum
+
+# Identity
+node_id: "node-0001"
+
+# Bootstrap peers (multiaddrs or wireguard entries)
+bootstrap_peers:
+  - ""
+
+# IPFS configuration
+ipfs:
+  api_addr: "/ip4/127.0.0.1/tcp/5001"
+
+# Embedding backend (e.g., ollama)
+embeddings:
+  provider: "ollama"
+  url: "http://localhost:11434"
+
+# Index storage
+index:
+  sqlite_path: "./data/atheneum.db"
+  chroma_collection: "atheneum"
